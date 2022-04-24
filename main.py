@@ -4,11 +4,8 @@ import requests
 Discord_Webhook = os.environ.get('Discord_Webhook')
 Website_Api = os.environ.get('Website_Api')
 
-def SendMessageToDiscord(Msg):
-    Message = {
-        "content": Msg
-    }
-    requests.post(Discord_Webhook, data=Message)
+def SendMessageToDiscord(Data):
+    requests.post(Discord_Webhook, data=Data)
 
 app = FastAPI()
 
